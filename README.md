@@ -11,4 +11,6 @@ Installation:
 npm install
 
 Launch:
+1. Run
 npx parcel index.html
+2. Upload contents of dist directory to server...
