@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>Cycle Tracker</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="cycletracker.json" />
-    <link rel="icon" href="icons/circle.svg" />
+    <link rel="manifest" href="../cycletracker.json" />
+    <link rel="icon" href="./icons/circle.svg" />
 </head>
 
 <body>
@@ -39,9 +39,24 @@
     </section>
     <script src="app.js" defer></script>
     <!-- Register the app's service worker. -->
-    <script>
+    <!--<script>-->
+    <script type="module">
         if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("sw.js");
+            //navigator.serviceWorker.register("sw.js")
+            //if ("serviceWorker" in navigator) {
+            //    navigator.serviceWorker.register(new URL('sw.js', import.meta.url));
+            //} 
+            navigator.serviceWorker.register(new URL('../sw.js', import.meta.url))
+                .then(
+                    (registration) => {
+                        console.log("Service worker registration successful:", registration);
+                    },
+                    (error) => {
+                        console.error(`Service worker registration failed: ${error}`);
+                    },
+                );
+        } else {
+            console.error("Service workers are not supported.");
         }
     </script>
 </body>

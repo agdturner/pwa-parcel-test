@@ -7,10 +7,10 @@ const CACHE_NAME = `period-tracker-${VERSION}`;
 // The static resources that the app needs to function.
 const APP_STATIC_RESOURCES = [
   "/",
-  "/index.html",
-  "/app.js",
-  "/style.css",
-  "/icons/wheel.svg",
+  "/src/index.html",
+  "/src/app.js",
+  "/src/style.css",
+  "/src/icons/wheel.svg",
 ];
 
 // On install, cache the static resources
@@ -64,6 +64,7 @@ self.addEventListener("fetch", (event) => {
   );
 });
 
+/*
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").then(
       (registration) => {
@@ -73,6 +74,7 @@ if ("serviceWorker" in navigator) {
         console.error(`Service worker registration failed: ${error}`);
       },
     );
-  } else {
+} else {
     console.error("Service workers are not supported.");
-  }
+}
+*/
