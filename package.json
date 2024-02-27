@@ -1,10 +1,10 @@
 {
   "name": "my-project",
-  "source": "index.html",
+  "source": "src/index.html",
   "version": "1.0.0",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build --public-url https://agdturner.github.io/pwa-parcel-test/ --out-dir dist"
+    "build": "parcel build"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.11.0",
