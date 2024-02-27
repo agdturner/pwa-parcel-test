@@ -4,7 +4,13 @@
   "version": "1.0.0",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build --public-url ./"
+    "build": "parcel build"
+  },
+  "targets": {
+    "main": {
+      "distDir": "./dist",
+      "publicUrl": "/pwa-parcel-test/dist/"
+    }
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.11.0",
