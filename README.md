@@ -1,6 +1,9 @@
 # pwa-parcel-test
 Progressive Web App (https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) bundled with parcel2 test.
 
+This PWA is made available via:
+https://agdturner.github.io/pwa-parcel-test/dist/
+
 Dependencies:
 1. Node
 
