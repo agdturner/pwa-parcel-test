@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cycle Tracker</title>
+    <!--
+    <base href="/pwa-parcel-test/dist/">
+    -->
+    <link rel="stylesheet" href="/pwa-parcel-test/dist/main/index.d337bd84.css">
+    <link rel="manifest" href="/pwa-parcel-test/dist/main/up_/cycletracker.webmanifest">
+    <link rel="icon" href="/pwa-parcel-test/dist/main/circle.ad04b2dc.svg">
+</head>
+
+<body>
+    <h1>Period tracker</h1>
+    <form>
+        <fieldset>
+            <legend>Enter your period start and end date</legend>
+            <p>
+                <label for="start-date">Start date</label>
+                <input type="date" id="start-date" required="">
+            </p>
+            <p>
+                <label for="end-date">End date</label>
+                <input type="date" id="end-date" required="">
+            </p>
+        </fieldset>
+        <p>
+            <button type="submit">Add Period</button>
+        </p>
+    </form>
+    <section id="past-periods">
+        <!--
+        <h2>Past periods</h2>
+        <ul>
+            <li>From 01/01/2024 to 01/06/2024</li>
+            <li>From 01/29/2024 to 02/04/2024</li>
+        </ul>
+        -->
+    </section>
+    <script src="/pwa-parcel-test/dist/main/index.75b20965.js" defer=""></script>
+    <!-- Register the app's service worker. -->
+    <!--<script>-->
+    <script type="module">if ("serviceWorker" in navigator) //navigator.serviceWorker.register("sw.js")
+//if ("serviceWorker" in navigator) {
+//    navigator.serviceWorker.register(new URL('sw.js', import.meta.url));
+//} 
+navigator.serviceWorker.register(new URL("up_/sw.js", import.meta.url)).then((registration)=>{
+    console.log("Service worker registration successful:", registration);
+}, (error)=>{
+    console.error(`Service worker registration failed: ${error}`);
+});
+else console.error("Service workers are not supported.");
+
+
+</script>
+</body>
+
+</html>

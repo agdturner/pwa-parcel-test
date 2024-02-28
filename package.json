@@ -7,9 +7,9 @@
     "build": "parcel build"
   },
   "targets": {
-    "dist": {
+    "main": {
       "distDir": "./dist",
-      "publicUrl": "/pwa-parcel-test/dist/"
+      "publicUrl": "/pwa-parcel-test/dist/main/"
     }
   },
   "devDependencies": {
